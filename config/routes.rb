@@ -3,8 +3,6 @@ Rails.application.routes.draw do
 
   get("/", { :controller => "director", :action => "index" })
 
-
-
   get("/director", { :controller => "director", :action => "index" })
   get("/director/new",     { :controller => "director", :action => "new_director" })
   get("/director/add",     { :controller => "director", :action => "add_director" })
@@ -21,12 +19,12 @@ Rails.application.routes.draw do
   get("/actor/update/:id", { :controller => "actor", :action => "update_actor" })
   get("/actor/:id",       { :controller => "actor", :action => "show" })
 
-
-
-
-
   get("/movie", { :controller => "movie", :action => "index" })
-
+  get("/movie/new",     { :controller => "movie", :action => "new_movie" })
+  get("/movie/add",     { :controller => "movie", :action => "add_movie" })
+  get("/movie/delete/:id", { :controller => "movie", :action => "destroy" })
+  get("/movie/:id/edit",  { :controller => "movie", :action => "edit_movie" })
+  get("/movie/update/:id", { :controller => "movie", :action => "update_movie" })
   get("/movie/:id",       { :controller => "movie", :action => "show" })
 
 
